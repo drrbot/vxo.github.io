@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VXO — Decode the World</title>
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050505;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        /* VXO Logo Design */
+        .logo {
+            font-size: clamp(5rem, 15vw, 9rem);
+            font-weight: 100;
+            margin: 0;
+            padding: 0;
+            color: transparent;
+            background: linear-gradient(135deg, #fff 0%, #d4af37 50%, #8a6d3b 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            letter-spacing: 25px;
+            text-transform: uppercase;
+            animation: fadeInScale 2.5s ease-out forwards;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2));
+            user-select: none;
+        }
+
+        /* Slogan */
+        .slogan {
+            font-size: 1rem;
+            letter-spacing: 8px;
+            color: #666;
+            text-transform: uppercase;
+            margin-top: -10px;
+            opacity: 0;
+            animation: slideUp 2s ease-out 1s forwards;
+        }
+
+        /* Decorative Line */
+        .line {
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 20px auto;
+            animation: expandLine 2s ease-in-out 0.5s forwards;
+        }
+
+        /* Entry Button */
+        .enter-btn {
+            margin-top: 40px;
+            padding: 12px 35px;
+            background: transparent;
+            border: 1px solid #333;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            opacity: 0;
+            animation: fadeIn 3s ease 2s forwards;
+        }
+
+        .enter-btn:hover {
+            border-color: #d4af37;
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); filter: blur(10px); }
+            100% { opacity: 1; transform: scale(1); filter: blur(0); }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes expandLine {
+            0% { width: 0; }
+            100% { width: 150px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Background Glow */
+        .bg-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+        <h1 class="logo">VXO</h1>
+        <div class="line"></div>
+        <p class="slogan">Decode the World</p>
+        <button class="enter-btn">Entering the Void</button>
+    </div>
+
+</body>
+</html>
